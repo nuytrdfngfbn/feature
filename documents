@@ -1,0 +1,17 @@
+from sklearn.feature_extraction.text import CountVectorizer
+
+# Список документов
+documents = [
+    'This is the first document.',
+    'This document is the second document.',
+    'And this is the third one.',
+    'Is this the first document?'
+]
+
+# Векторизация текста
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(documents)
+
+# Получение словаря признаков
+features = vectorizer.get_feature_names()
+print(features)
